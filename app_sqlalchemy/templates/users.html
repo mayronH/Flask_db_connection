@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flask SQLAlchemy</title>
+    </head>
+    <body>
+        <div class="container">
+            {% for user in users %}
+                <ul id="user{{ user.id }}">
+                    <li class="user">
+                        <span class="field-name">User:</span>
+                        <span class="field-value">{{ user.username }}</span>
+                    </li>
+
+                    <li class="user">
+                        <span class="field-name">Email:</span>
+                        <span class="field-value">{{ user.email }}</span>
+                    </li>
+
+                    <li class="user">
+                        <span class="field-name">Created at:</span>
+                        <span class="field-value">{{ user.created_date }}</span>
+                    </li>
+
+                    <li class="user">
+                        <span class="field-name">Bio:</span>
+                        <span class="field-value">{{ user.bio }}</span>
+                    </li>
+
+                    <li class="user">
+                        <span class="field-name">Admin:</span>
+                        <span class="field-value">{{ user.admin }}</span>
+                    </li>
+                </ul>
+            {% endfor %}
+        </div>
+    </body>
+</html>
